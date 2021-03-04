@@ -27,3 +27,10 @@ jobs:
           MONGO_URL: "mongodb://localhost:27017/test"
           MONGO_OPLOG_URL: "mongodb://localhost:27017/local?authSource=test"
 ```
+
+## Building and releasing a version
+This example shows how to push a new `ci-mongo` image into the `veho` namespace and applying a tag, `4.4`.
+```
+docker build ./ -t veho/ci-mongo:4.4
+docker push veho/ci-mongo:4.4
+```
